@@ -575,11 +575,12 @@
 }
 
 .our-journey .content .details .list-group .list-item .count {
-    font-size: 5rem;
+    font-size: 4.5rem;
     display: block;
-    font-weight: normal;
-    font-family: 'Cormorant Garamond', serif;
+    font-weight:lighter;
+   font-family: 'Courier New', Courier, monospace;
     position: relative;
+
 }
 
 .our-journey .content .details .list-group .list-item .count::before {
