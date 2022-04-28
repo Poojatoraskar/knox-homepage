@@ -1,20 +1,46 @@
+// $(document).ready(function () {
+//     let $navBtn = $('#collapseBtn');
+//     let $header = $('#hero-header');
+//     let $navMenuItems = $('#collapseMenu');
+//     let $wrap = $('.wrapper');
+//     $navBtn.on('click', () => {
+//         $navBtn.toggleClass('cross');
+//         $navMenuItems.toggleClass('show')
+
+//     })
+
+//     if ($(window).scrollTop > 0) {
+//         $(window).animate({
+//             'transition': '500ms',
+//         }, 1000)
+       
+//     }
+
+
+
 $(document).ready(function () {
     let $navBtn = $('#collapseBtn');
     let $header = $('#hero-header');
     let $navMenuItems = $('#collapseMenu');
-    let $wrap = $('.wrapper');
+    let $navbar =$('#navbar')
+    let $wrapper = $('.wrapper');
     $navBtn.on('click', () => {
         $navBtn.toggleClass('cross');
-        // $wrap.toggleClass('main')
         $navMenuItems.toggleClass('show')
-
+        $navbar.toggleClass('reveal')
+        
+        $('#hero-background').toggleClass('main');
+        $wrapper.toggleClass('blur')
     })
 
     if ($(window).scrollTop > 0) {
         $(window).animate({
             'transition': '500ms',
         }, 1000)
+
+        
     }
+
 
 
     // On window scroll up header show and hide when scroll down

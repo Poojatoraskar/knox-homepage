@@ -39,14 +39,14 @@
 
 
 /* Hero background image section start */
-#banner-background {
+#hero-background {
     background: #231620 url(../images/background.jpg) no-repeat center right;
-    background-size: cover;
-
+    background-size: 100% 100%;
+    height: 740px;
     position: relative;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
+#hero-background .img-fluid{width: 100%;position: absolute;height: 700px;}
 .header {
     width: 100%;
     padding: 30px 0;
@@ -216,10 +216,18 @@
     right: 0;
     width: 50%;
     transition: 1s;
+    position: fixed;
+    height: 100vh;
     z-index: 100;
     visibility: visible;
 }
-
+#collapseMenu .navbar-nav span {
+    display: inline-block;
+    margin-bottom: -25px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: bottom
+}
 #collapseMenu.show .navbar-nav {
     opacity: 1;
     transform: translateY(0);
@@ -236,7 +244,9 @@
 #collapseMenu.show .nav-item .nav-link {
     animation: menu-up ease 2s forwards;
 }
-
+#collapseMenu .navbar-nav .blureffect {
+    opacity: 1;
+}
 @keyframes menu-up {
     from {
         opacity: 0;
@@ -589,11 +599,6 @@
 }
 
 /* Our Journey Section End */
-
-
-
-
-
 /* Parterns companies Section start */
 .parterne-compnaies {
     padding: 100px 0;
@@ -1153,3 +1158,303 @@ footer .container {
 }
 
 /* Footer section end */
+/* media queries */
+@media screen and (max-width:1079px) {
+   
+    .banner-heading
+    {
+        font-size: 4rem;
+        padding: 10px 0 200px 30px;
+    }
+    .banner-heading span+span::after 
+    {
+        top: -10px;
+        left: 200px;
+        width: 55px;
+    }
+    .banner-heading{
+        top:20%;
+    }
+    
+    .learn-more .btn .btn-learn::before
+    {
+        margin-left: -10px;
+    }
+    .learn-more .btn .btn-learn::after
+    {
+        right: 45px;
+    }
+    .animate.active .learn-more .animate-arrow::before,.animate.active .scroll-more .animate-arrow::before 
+    {
+        width: 100%;
+        top: 106px; 
+         right: 23px;
+     }
+    .footer .footer-blocks .footer-blocks-inner-right .foot-item .foot-link,.footer .footer-blocks .footer-blocks-inner-left .icon
+    {
+        font-size: 2rem;
+    }
+    .animate.active .learn-more .animate-arrow::before, .animate.active .scroll-more .animate-arrow::before
+    {
+       top: 125px;
+       right:20px;
+       width: 80%;
+   }
+}
+@media screen and (max-width:1016px){
+    .animate.active .learn-more .animate-arrow::before,.animate.active .scroll-more .animate-arrow::before 
+    {
+        width: 100%;
+        top: 110px; 
+        right:20px;
+     }  
+}
+@media screen and (max-width:990px){
+    .animate.active .learn-more .animate-arrow::before,.animate.active .scroll-more .animate-arrow::before 
+    {
+        width: 100%;
+        top: 110px; 
+        right:8px;
+     }  
+}
+@media screen and (max-width:900px){
+    .animate.active .learn-more .animate-arrow::before,.animate.active .scroll-more .animate-arrow::before 
+    {
+        width: 100%;
+        top: 125px; 
+        right:-20px;
+     }  
+}
+@media only screen and (max-width:768px){
+    .news-block
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .news-block .block
+    {
+        width: 100%; 
+        flex:  0 0 100%;
+        margin-bottom: 30px;
+    }
+    .learn-more, .scroll-more
+     {
+         justify-content: space-between; 
+          flex-wrap: nowrap;}
+    .learn-more .animate-arrow, .scroll-more .animate-arrow
+    {
+        width: 32%;
+    }
+    .animate.active .learn-more .animate-arrow::before, .animate.active .scroll-more .animate-arrow::before
+     {
+        top: 130px;
+        right:10px;
+        width: 80%;
+    }
+    .animate.active .learn-more .animate-arrow .icon::after, .animate.active .scroll-more .animate-arrow .icon::after {
+        width: 50%;
+    }
+    
+    .animate.active .learn-more .animate-arrow .icon::before, .animate.active .scroll-more .animate-arrow .icon::before {
+        width: 50%;bottom: 
+        50px;right: -50px;
+    }
+}
+@media only screen and (max-width:668px){
+    .animate.active .learn-more .animate-arrow::before, .animate.active .scroll-more .animate-arrow::before
+    {
+       top: 140px;
+       right:-10px;
+       width: 80%;
+   }   
+}
+@media only screen and (max-width:425px){
+    .header .navbar .logo{
+        font-size: 1rem;
+    }
+    .header .navbar .contact-menu .link {
+        font-size: 0.75rem;
+    }
+    .header .navbar .contact-menu .menu-btn{
+        width: 30px;
+    }
+    .header .navbar-nav .nav-item .nav-link{
+        font-size: 1rem;
+    }
+    #collapseMenu{
+       padding-top: 180px;
+       padding-left: 60px;
+    }
+    .banner-heading{
+        font-size:2rem;
+        line-height:2rem;
+    }
+    .banner-heading span+span {
+        animation: text-up 1s ease 200ms forwards;
+    }
+   
+    .about__text{
+        font-size: 1.563rem;
+    }
+    .learn-more .btn .btn-learn span {
+        font-size: 12px;
+    }
+    .learn-more .btn{
+        width: 160px;
+        margin-left:10px;
+    }
+    .learn-more .btn .btn-learn::after{
+        right: 55px;
+    }
+    .learn-more .animate-arrow, .scroll-more .animate-arrow
+    {
+        width: 50%;
+    }
+    .learn-more .animate-arrow .icon, .scroll-more .animate-arrow .icon
+    {
+        width: 150px;
+    }
+    .animate.active .learn-more .animate-arrow::before, .animate.active .scroll-more .animate-arrow::before
+    {
+        top: 140px;
+        right:15px;
+        width: 80%;
+    }
+    .animate.active .learn-more .animate-arrow .icon::after, .animate.active .scroll-more .animate-arrow .icon::after 
+    {
+        width: 60%;
+        right: -13px;
+        bottom: 2px;
+    }
+    .animate.active .learn-more .animate-arrow .icon::before, .animate.active .scroll-more .animate-arrow .icon::before 
+    {
+        width: 50%;
+        bottom: 40px;
+        right: -50px;
+    }
+    .our-journey .heading{
+        font-size: 1.875rem;
+    }
+    .our-journey .content .img
+    {
+        min-height: unset;
+        width: 100%;
+    }
+    .our-journey .content .details{
+        width: 100%;
+    }
+    .our-journey .content .details .main-text{
+        font-size: 1rem;
+       line-height: 20px;
+    }
+    .our-journey .content .details .list-group .list-item .count{
+        font-size: 2rem;
+    }
+    .parterne-compnaies__text {
+        font-size: 1.875rem;
+    }
+    .parterne-compnaies .scroll-more .text{
+        font-size: 0.875rem;
+    }
+    .img-slider .slider .slide-img .overlay {
+        width: 100%;
+        bottom: 80px;
+    }
+    .img-slider .slider .heading
+    {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .img-slider .slider .heading .title
+    {
+        width: 100%;
+    }
+    .img-slider .slider .heading .text
+    {
+        width: 100%;
+    }
+    .portfolio .heading .title, .news-media .heading .title
+    {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .portfolio .scrolling-text .text-reverse, .portfolio .scrolling-text .text-forward
+    {
+        font-size: 2rem;
+    }
+    .portfolio .scrolling-text .contact-us-btn
+    {
+        width: 100px;
+        height: 100px;
+        right: 10%;
+        font-size: .875rem;
+    }
+    .portfolio .scrolling-text .contact-us-btn .img-fluid
+    {
+        bottom: 15px;
+    }
+
+    .news-block .block .block-title{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+    .footer .footer-blocks{
+        display: block;
+    }
+    .footer .footer-blocks .footer-blocks-inner{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer .footer-blocks .footer-blocks-inner-right
+    {
+        padding: 0;
+    }
+    .footer .footer-blocks .footer-blocks-inner-right .foot-item .foot-link{
+        font-size: 2rem;
+    }
+    .footer .footer-blocks .footer-blocks-inner-left .icon{
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (max-width:375px){
+    .animate.active .learn-more .animate-arrow::before, .animate.active .scroll-more .animate-arrow::before
+    {
+        top: 147px;
+        right:-10px;
+        width: 80%;
+    }
+    .img-slider .slider .slide-img .overlay {
+        left: 0px;
+    }
+}
+@media only screen and (max-width:320px){
+  
+    .animate-arrow{
+        margin-left: 100px;
+    }
+   
+    .animate.active .learn-more .animate-arrow::before, .animate.active .scroll-more .animate-arrow::before
+    {
+        top: 170px;
+        right:-8px;
+        width: 90%;
+    }
+    .learn-more .btn .btn-learn span{
+        font-size: 8px;
+    }
+    .animate.active .learn-more .animate-arrow .icon::after, .animate.active .scroll-more .animate-arrow .icon::after 
+    {
+        width: 60%;
+        right: 68px;
+        bottom: 2px;
+    }
+    .animate.active .learn-more .animate-arrow .icon::before, .animate.active .scroll-more .animate-arrow .icon::before 
+    {
+        width: 50%;
+        bottom: 40px;
+        right: 30px;
+    }
+  
+}
